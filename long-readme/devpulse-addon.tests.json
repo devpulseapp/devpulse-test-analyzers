@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 2,
+  "cases": [
+    { "id": "short-readme", "workspace": "fixtures/short", "settings": {}, "expectedFindings": [{ "checkId": "long-readme", "outputId": "long-readme", "count": 0 }] },
+    { "id": "long-readme", "workspace": "fixtures/long", "settings": {}, "expectedFindings": [{ "checkId": "long-readme", "outputId": "long-readme", "count": 1 }] }
+  ]
+}

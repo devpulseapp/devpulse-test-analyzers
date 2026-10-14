@@ -1,0 +1,40 @@
+{
+  "apiVersion": 2,
+  "manifestVersion": 2,
+  "id": "placeholder.long-readme",
+  "version": "0.1.0",
+  "displayName": "Placeholder Long README",
+  "description": "A placeholder Analyzer for testing the DevPulse Marketplace: reports a README.md longer than 400 lines.",
+  "category": "developer",
+  "publisher": { "id": "placeholder", "displayName": "Marketplace test placeholder" },
+  "authors": [{ "name": "Marketplace test placeholder" }],
+  "license": "Apache-2.0",
+  "licenseFile": "LICENSE",
+  "readme": "README.md",
+  "defaultLocale": "en",
+  "locales": [],
+  "engines": { "devpulse": ">=0.0.1 <1.0.0" },
+  "target": { "platform": "any", "architecture": "any" },
+  "apiFeatures": { "required": ["contributions.check-v1", "checks.line-threshold"], "optional": [] },
+  "runtime": { "id": "long-readme", "tier": "declarative" },
+  "contributes": [
+    {
+      "id": "long-readme",
+      "type": "check",
+      "displayName": "Long README",
+      "description": "Reports a README.md longer than 400 lines.",
+      "category": "maintainability",
+      "detector": { "kind": "line-threshold", "maximumLines": 400, "outputId": "long-readme", "paths": ["README.md"] },
+      "outputs": [{ "id": "long-readme", "displayName": "Long README", "description": "README.md is longer than 400 lines.", "defaultSeverity": "info" }],
+      "execution": { "automatic": "user-opt-in", "cost": "cheap", "maximumMemoryMiB": 32, "timeoutMs": 5000 },
+      "permissionIds": ["read-readme"],
+      "settingIds": [],
+      "requirementIds": []
+    }
+  ],
+  "permissions": [
+    { "id": "read-readme", "capability": "workspace.files.read", "reason": "Counts the lines of your README.md.", "requiredness": "required", "scope": { "kind": "open-project" } }
+  ],
+  "requirements": [],
+  "settings": []
+}
