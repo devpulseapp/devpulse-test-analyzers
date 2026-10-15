@@ -2,7 +2,7 @@
   "apiVersion": 2,
   "manifestVersion": 2,
   "id": "placeholder.long-readme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Placeholder Long README",
   "description": "A placeholder Analyzer for testing the DevPulse Marketplace: reports a README.md longer than 400 lines.",
   "category": "developer",
